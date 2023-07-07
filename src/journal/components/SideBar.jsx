@@ -1,15 +1,16 @@
-import { TurnedInNot } from "@mui/icons-material"
-import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from "@mui/material"
+import { TurnedInNot } from '@mui/icons-material'
+import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
 
-export const SideBar = ({drawerWith = 240}) => {
+export const SideBar = ({ drawerWith = 240 }) => {
   return (
     <Box component="nav"
-    sx={{width:{sm:drawerWith}, flexShrink:{sm:0}}}>
+    sx={{ width: { sm: drawerWith }, flexShrink: { sm: 0 } }}>
       <Drawer
       variant="permanent"
       open={true}
-      sx={{display:{xs:"block"},
-        "& .MuiDrawer-paper": {boxSizing: "border-box", width: drawerWith}
+      sx={{
+        display: { xs: 'block' },
+        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWith }
       }}
       >
         <Toolbar>
@@ -19,15 +20,15 @@ export const SideBar = ({drawerWith = 240}) => {
 
         <List>
           {
-            ['Enero', 'Febrero', 'Marzo', 'Abril'].map(text=>(
+            ['Enero', 'Febrero', 'Marzo', 'Abril'].map(text => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
                     <TurnedInNot/>
                   </ListItemIcon>
                   <Grid container>
-                    <ListItemText  primary={text}/>
-                    <ListItemText  secondary={"Lorem ipsum dolor sit, amet consectetur."}/>
+                    <ListItemText primary={text}/>
+                    <ListItemText secondary={'Lorem ipsum dolor sit, amet consectetur.'}/>
                   </Grid>
                 </ListItemButton>
               </ListItem>
