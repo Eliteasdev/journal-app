@@ -25,3 +25,4 @@ dist-ssr
 
 #Env
 src/firebase/config.js
+README.MD
